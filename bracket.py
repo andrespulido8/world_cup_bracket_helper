@@ -27,12 +27,12 @@ print("World Cup Bracket Helper — Press Ctrl+C to exit\n")
 
 while True:
     try:
-        # --- Draw probability ---
-        draw = read_int("Prob of DRAW (1–9): ", 1, 9)
-
         # --- Team A probability ---
-        max_a = 10 - draw
-        a = read_int(f"Prob of TEAM A winning (1–{max_a}): ", 1, max_a)
+        a = read_int(f"Prob of TEAM A winning (1–9): ", 1, 9)
+
+        # --- Draw probability ---
+        max_draw = 10 - a
+        draw = read_int(f"Prob of DRAW (1–{max_draw}): ", 1, max_draw)
 
         b = 10 - draw - a
 
